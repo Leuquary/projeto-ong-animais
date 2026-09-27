@@ -66,7 +66,7 @@ body{
     gap: 10px;
 }
 
-.header_content__logo img{
+.header_content__logo h1 img{
     width: 25px;
     height: 25  px;
     object-fit: contain;
@@ -78,7 +78,7 @@ body{
     justify-content: space-between;
 }
 
-.hero .hero_title h1{
+.hero .hero_title h2{
     font-size: 48px;
     font-family: 'Fraunces', Georgia, serif;
     line-height: 1.2;
@@ -179,7 +179,7 @@ body{
     gap: 20px;
 }
 
-.ong_content__title h2{
+.ong_content__title h3{
     font-family: 'Fraunces', Georgia, serif;
     font-size: 34px;
     color: #1F0062;
