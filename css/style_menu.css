@@ -1,6 +1,6 @@
 .header{
     padding: 20px;
-    border-bottom: 1px solid rgba(105, 22, 11, 0.162);
+    border-bottom: 1px solid var(--borda);
 }
 
 .header .header_content{
@@ -11,9 +11,11 @@
 }
 
 .header h1{
-    font-family: 'Fraunces', Georgia, serif;
-    color: #1F0062;
-    font-size: 20px;
+    font-family: var(--fonte-
+    
+    titulo);
+    color: var(--roxo);
+    font-size: var(--tamanho-subtitulo);
 }
 
 .header nav ul{
@@ -28,19 +30,19 @@
 }
 
 .header nav ul li.active{
-    border-bottom-color: #D73220;   
+    border-bottom-color: var(--vermelho);   
 }
 
 .header nav ul li.active a{
-    color: #1F0062;
+    color: var(--roxo);
     font-weight: 700;
 }
 
 .header nav ul li a{
     text-decoration: none;
     text-decoration-line: none;
-    font-size: 14px;
-    color: #68150A;
+    font-size: var(--tamanho-texto-pequeno);
+    color: var(--marrom);
 }
 
 .header_content__logo{

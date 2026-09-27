@@ -13,15 +13,15 @@
 }
 
 .projetos_content__title h2 {
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: 34px;
-    color: #1F0062;
+    font-family: var(--fonte-titulo);
+    font-size: var(--tamanho-titulo);
+    color: var(--roxo);
 }
 
 .projetos_content__title p {
-    font-family: 'Work Sans', sans-serif;
-    color: #6b5A54;
-    font-size: 16px;
+    font-family: var(--fonte-texto);
+    color: var(--texto);
+    font-size: var(--tamanho-texto);
     line-height: 1.8;
 }
 
@@ -36,42 +36,42 @@
     align-items: center;
     gap: 30px;
     padding: 28px 0;
-    border-top: 1px solid rgba(105, 22, 11, 0.162);
+    border-top: 1px solid var(--borda);
 }
 
 .projetos_content__item:last-child {
-    border-bottom: 1px solid rgba(105, 22, 11, 0.162);
+    border-bottom: 1px solid var(--borda);
 }
 
 .projetos_item__tag {
     justify-self: start;
     display: inline-flex;
     white-space: nowrap;
-    font-family: 'Work Sans', sans-serif;
-    font-size: 14px;
+    font-family: var(--fonte-texto);
+    font-size: var(--tamanho-texto-pequeno);
     padding: 8px 10px;
     font-weight: 700;
     border-radius: 8px;
 }
 
 .tag_resgate {
-    background-color: #D7322026;
-    color: #D73220;
+    background-color: var(--vermelho-suave);
+    color: var(--vermelho);
 }
 
 .tag_saude {
-    background-color: #0b78b340;
-    color: #0B78B3;
+    background-color: var(--azul-suave);
+    color: var(--azul);
 }
 
 .tag_adocao {
-    background-color: #68150A26;
-    color: #68150A;
+    background-color: var(--marrom-suave);
+    color: var(--marrom);
 }
 
 .tag_educacao {
-    background-color: #1F006226;
-    color: #1F0062;
+    background-color: var(--roxo-suave);
+    color: var(--roxo);
 }
 
 .projetos_item__desc {
@@ -82,15 +82,15 @@
 }
 
 .projetos_item__desc h3 {
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: 24px;
-    color: #1F0062;
+    font-family: var(--fonte-titulo);
+    font-size: var(--tamanho-subtitulo);
+    color: var(--roxo);
 }
 
 .projetos_item__desc p {
-    font-family: 'Work Sans', sans-serif;
-    font-size: 16px;
-    color: #6b5A54;
+    font-family: var(--fonte-texto);
+    font-size: var(--tamanho-texto);
+    color: var(--texto);
     line-height: 1.8;
 }
 
@@ -106,14 +106,14 @@
 }
 
 .projetos_item__stat span:nth-child(1) {
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: 34px;
-    color: #D73220;
+    font-family: var(--fonte-titulo);
+    font-size: var(--tamanho-titulo);
+    color: var(--vermelho);
     font-weight: 700;
 }
 
 .projetos_item__stat span:nth-child(2) {
-    font-family: 'Work Sans', sans-serif;
-    font-size: 16px;
-    color: #6b5A54;
+    font-family: var(--fonte-texto);
+    font-size: var(--tamanho-texto);
+    color: var(--texto);
 }

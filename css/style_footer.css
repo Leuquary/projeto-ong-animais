@@ -1,5 +1,5 @@
 .footer{
-    background-color: #1F0062;
+    background-color: var(--roxo);
 }
 
 .footer_content{
@@ -22,15 +22,15 @@
 }
 
 .footer_content__item h4{
-    font-family: 'Fraunces', Georgia, serif;
-    color: #ffffffeb;
-    font-size: 30px;
+    font-family: var(--fonte-titulo);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: var(--tamanho-subtitulo);
 }
 
 .footer_content__item span{
-    font-family: 'Work Sans', sans-serif;
-    color: #ffffffc5;
-    font-size: 18px;
+    font-family: var(--fonte-texto);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: var(--tamanho-texto);
     line-height: 2;
 }
 
@@ -47,17 +47,18 @@
 .footer_content__item ul li a{
     text-decoration: none;
     text-decoration-line: none;
-    font-size: 16px;
-    color: #ffffffc5;
+    font-size: var(--tamanho-texto);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .footer_content hr{
     border: none;
     height: 1px;
-    background-color: rgba(255, 255, 255, 0.28);
+    background-color: rgba(255, 255, 255, 0.5);
     margin: 0;
 }
 
 .footer_content__right span{
-    color: #ffffffc9;
+    font-size: var(--tamanho-texto-pequeno);
+    color: rgba(255, 255, 255, 0.5);
 }

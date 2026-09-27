@@ -14,15 +14,15 @@
 }
 
 .cadastro_content__title h2 {
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: 34px;
-    color: #1F0062;
+    font-family: var(--fonte-titulo);
+    font-size: var(--tamanho-titulo);
+    color: var(--roxo);
 }
 
 .cadastro_content__title > p {
-    font-family: 'Work Sans', sans-serif;
-    color: #6b5A54;
-    font-size: 16px;
+    font-family: var(--fonte-texto);
+    color: var(--texto);
+    font-size: var(--tamanho-texto);
     line-height: 1.8;
 }
 
@@ -37,51 +37,51 @@
     gap: 20px;
     align-items: start;
     padding: 20px 0;
-    border-top: 1px solid rgba(105, 22, 11, 0.162);
+    border-top: 1px solid var(--borda);
 }
 
 .cadastro_content__item:last-child {
-    border-bottom: 1px solid rgba(105, 22, 11, 0.162);
+    border-bottom: 1px solid var(--borda);
 }
 
 .cadastro_content__item h4 {
-    font-family: 'Work Sans', sans-serif;
-    font-size: 20px;
+    font-family: var(--fonte-texto);
+    font-size: var(--tamanho-titulo-menu);
     padding: 10px;
     border-radius: 10px;
     text-align: center;
 }
 
 .adocao{
-    background-color: #68150A26;
-    color: #68150A;
+    background-color: var(--marrom-suave);
+    color: var(--marrom);
 }
 
 .voluntariado{
-    background-color: #0b78b340;
-    color: #0B78B3;
+    background-color: var(--azul-suave);
+    color: var(--azul);
 }
 
 .doacao{
-    background-color: #D7322026;
-    color: #D73220;
+    background-color: var(--vermelho-suave);
+    color: var(--vermelho);
 }
 
 .cadastro_content__item p {
-    font-family: 'Work Sans', sans-serif;
-    font-size: 16px;
-    color: #6b5A54;
+    font-family: var(--fonte-texto);
+    font-size: var(--tamanho-texto);
+    color: var(--texto);
     line-height: 1.8;
 }
 
 .formulario {
-    background-color: #fff;
+    background-color: var(--branco);
     border-radius: 10px;
     padding: 40px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: #D73220;
+    background-color: var(--vermelho);
 }
 
 .formulario fieldset {
@@ -98,19 +98,19 @@
     width: 100%;
     float: left;
 
-    font-size: 16px;
+    font-size: var(--tamanho-texto);
     font-weight: 700;
 }
 
 .formulario legend,
 .formulario label {
-    font-family: 'Work Sans', sans-serif;
-    color: #fff;
+    font-family: var(--fonte-texto);
+    color: var(--branco);
     padding: 0;
 }
 
 .formulario label{
-    font-size: 14px;
+    font-size: var(--tamanho-texto-pequeno);
     font-weight: 500;
 }
 
@@ -130,10 +130,10 @@
 .formulario select,
 .formulario textarea {
     width: 100%;
-    font-family: 'Work Sans', sans-serif;
-    font-size: 14px;
-    color: #1F0062;
-    background-color: #ffffffef;
+    font-family: var(--fonte-texto);
+    font-size: var(--tamanho-texto-pequeno);
+    color: var(--roxo);
+    background-color: var(--branco-94);
     border: none;
     border-radius: 8px;
     padding: 12px;
@@ -146,29 +146,29 @@
 }
 
 .formulario ::placeholder {
-    color: #6b5A54;
+    color: var(--texto);
 }
 
 .formulario__nota {
-    font-family: 'Work Sans', sans-serif;
-    font-size: 16px;
-    color: #6b5A54;
+    font-family: var(--fonte-texto);
+    font-size: var(--tamanho-texto);
+    color: var(--texto);
 }
 
 .formulario button {
     width: 100%;
     padding: 15px 20px;
-    background-color: #962216;
-    color: #fff;
+    background-color: var(--vermelho-escuro);
+    color: var(--branco);
     border: none;
     border-radius: 5px;
-    font-family: 'Work Sans', sans-serif;
+    font-family: var(--fonte-texto);
     font-weight: 700;
-    font-size: 16px;
+    font-size: var(--tamanho-texto);
     cursor: pointer;
 }
 
 .formulario button:hover {
-    background-color: #68170e;
+    background-color: var(--vermelho-hover);
     transition: all 300ms;
 }
