@@ -1,0 +1,56 @@
+.header{
+    padding: 20px;
+    border-bottom: 1px solid rgba(105, 22, 11, 0.162);
+}
+
+.header .header_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin: 0 100px;
+}
+
+.header h1{
+    font-family: 'Fraunces', Georgia, serif;
+    color: #1F0062;
+    font-size: 20px;
+}
+
+.header nav ul{
+    display: flex;
+    gap: 30px;
+}
+
+.header nav ul li{
+    list-style: none;
+    padding-bottom: 8px;
+    border-bottom: 2px solid transparent;
+}
+
+.header nav ul li.active{
+    border-bottom-color: #D73220;   
+}
+
+.header nav ul li.active a{
+    color: #1F0062;
+    font-weight: 700;
+}
+
+.header nav ul li a{
+    text-decoration: none;
+    text-decoration-line: none;
+    font-size: 14px;
+    color: #68150A;
+}
+
+.header_content__logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header_content__logo h1 img{
+    width: 25px;
+    height: 25  px;
+    object-fit: contain;
+}
