@@ -308,7 +308,7 @@ body{
     transition: all 300ms;
 }
 
-.cadastro{
+.disclaimer-cadastro{
     margin: 0 100px;
     border-radius: 10px;
     background-color: #D73220;
@@ -318,26 +318,26 @@ body{
     align-items: center;
 }
 
-.cadastro .cadastro_content{
+.disclaimer-cadastro__content{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.cadastro h4{
+.disclaimer-cadastro h4{
     font-weight: 700;
     font-size: 24px;
     color: #fff;
     font-family: 'Fraunces', Georgia, serif;
 }
 
-.cadastro p{
+.disclaimer-cadastro p{
     color: #ffffffa8;
     font-family: 16px;
     font-family: 'Work Sans', sans-serif;
 }
 
-.cadastro .cadastro_button button{
+.disclaimer-cadastro__button button{
     background: transparent;
     padding: 10px 15px;
     border: 1px solid #fff;
@@ -349,7 +349,7 @@ body{
     cursor: pointer;
 }
 
-.cadastro .cadastro_button button:hover{
+.disclaimer-cadastro__button button:hover{
     background-color: #fff; 
     color: #D73220;
     transition: all 300ms;

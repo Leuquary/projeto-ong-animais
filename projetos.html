@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos | Projeto Patas de Rua</title>
+    <link rel="stylesheet" href="css/style_index.css">
+    <link rel="stylesheet" href="css/style_projeto.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_content">
+            <div class="header_content__logo">
+                <img src="assets/logo.png" alt="Logo Menu" />
+                <h1>Instituto Patas da Rua</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li class="active"><a href="projetos.html">Projetos</a></li>
+                    <li><a href="cadastro.html">Cadastre-se</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <section class="projetos">
+            <div class="projetos_content">
+                <div class="projetos_content__title">
+                    <h2>Nossos projetos</h2>
+                    <p>Cada frente de trabalho ataca uma parte do mesmo problema: o abandono. Vão do resgate imediato à educação de longo prazo.</p>
+                </div>
+                <div class="projetos_content__list">
+                    <div class="projetos_content__item">
+                        <span class="projetos_item__tag tag_resgate">Resgate</span>
+                        <div class="projetos_item__desc">
+                            <h4>Resgate de rua 24h</h4>
+                            <p>Equipe de plantão para atender denúncias de animais feridos, doentes ou em situação de risco em qualquer ponto da cidade.</p>
+                        </div>
+                        <div class="projetos_item__stat">
+                            <span>340</span>
+                            <span>resgates em 2026</span>
+                        </div>
+                    </div>
+                    <div class="projetos_content__item">
+                        <span class="projetos_item__tag tag_saude">Saúde</span>
+                        <div class="projetos_item__desc">
+                            <h4>Castração popular nas comunidades</h4>
+                            <p>Mutirões gratuitos de castração em parceria com clínicas veterinárias locais, para reduzir o abandono na origem.</p>
+                        </div>
+                        <div class="projetos_item__stat">
+                            <span>2.100</span>
+                            <span>castrações realizadas</span>
+                        </div>
+                    </div>
+                    <div class="projetos_content__item">
+                        <span class="projetos_item__tag tag_adocao">Adoção</span>
+                        <div class="projetos_item__desc">
+                            <h4>Feiras de adoção responsável</h4>
+                            <p>Encontros mensais para apresentar animais prontos para adoção, com avaliação de perfil e acompanhamento pós-adoção.</p>
+                        </div>
+                        <div class="projetos_item__stat">
+                            <span>840</span>
+                            <span>adoções concluídas</span>
+                        </div>
+                    </div>
+                    <div class="projetos_content__item">
+                        <span class="projetos_item__tag tag_educacao">Educação</span>
+                        <div class="projetos_item__desc">
+                            <h4>Guarda responsável nas escolas</h4>
+                            <p>Palestras e oficinas em escolas públicas sobre posse responsável, prevenção de maus-tratos e primeiros cuidados.</p>
+                        </div>
+                        <div class="projetos_item__stat">
+                            <span>18</span>
+                            <span>escolas atendidas</span>
+                        </div>
+                    </div>
+                    <div class="projetos_content__item">
+                        <span class="projetos_item__tag tag_saude">Saúde</span>
+                        <div class="projetos_item__desc">
+                            <h4>Casa de recuperação</h4>
+                            <p>Espaço de acolhimento para animais em tratamento prolongado, antes de estarem prontos para uma nova família.</p>
+                        </div>
+                        <div class="projetos_item__stat">
+                            <span>45</span>
+                            <span>vagas ativas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="disclaimer-cadastro">
+            <div class="disclaimer-cadastro__content">
+                <h4>Escolha como quer entrar nessa</h4>
+                <p>Voluntariado, apadrinhamento ou doação — cada projeto precisa de mãos diferentes.</p>
+            </div>
+            <div class="disclaimer-cadastro__button">
+                <button type="button">Fazer meu cadastro</button>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer_content">
+                <div class="footer_content__left">
+                    <div class="footer_content__item">
+                        <h4>Instituto Patas da Rua</h4>
+                        <span>Organização sem fins lucrativos dedicada ao resgate, tratamento e adoção de animais em
+                            situação
+                            de
+                            rua.</span>
+                    </div>
+                    <div class="footer_content__item">
+                        <h4>Navegação</h4>
+                        <ul>
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="projetos.html">Projetos</a></li>
+                            <li><a href="cadastro.html">Cadastre-se</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_content__item">
+                        <h4>Contato</h4>
+                        <span>institutopatas@gmail.com</span>
+                        <span>(11) 93830-4568</span>
+                        <span>São Paulo, SP</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="footer_content__right">
+                    <span>© 2026 Instituto Patas da Rua. Protótipo de site — conteúdo fictício para fins de
+                        demonstração.</span>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script>
+        const menuItems = document.querySelectorAll(".header nav ul li");
+        const paginaAtual = window.location.pathname.split("/").pop() || "index.html";
+
+        menuItems.forEach((item) => {
+            const link = item.querySelector("a");
+            item.classList.toggle("active", link.getAttribute("href") === paginaAtual);
+        });
+
+        if (!document.querySelector(".header nav ul li.active")) {
+            menuItems[0].classList.add("active");
+        }
+    </script>
+</body>
+
+</html>

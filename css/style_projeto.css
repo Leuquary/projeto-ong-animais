@@ -1,0 +1,119 @@
+.projetos_content {
+    margin: 0 100px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.projetos_content__title {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.projetos_content__title h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 34px;
+    color: #1F0062;
+}
+
+.projetos_content__title p {
+    font-family: 'Work Sans', sans-serif;
+    color: #6b5A54;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.projetos_content__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.projetos_content__item {
+    display: grid;
+    grid-template-columns: 120px 1fr auto;
+    align-items: center;
+    gap: 30px;
+    padding: 28px 0;
+    border-top: 1px solid rgba(105, 22, 11, 0.162);
+}
+
+.projetos_content__item:last-child {
+    border-bottom: 1px solid rgba(105, 22, 11, 0.162);
+}
+
+.projetos_item__tag {
+    justify-self: start;
+    display: inline-flex;
+    white-space: nowrap;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 14px;
+    padding: 8px 10px;
+    font-weight: 700;
+    border-radius: 8px;
+}
+
+.tag_resgate {
+    background-color: #D7322026;
+    color: #D73220;
+}
+
+.tag_saude {
+    background-color: #0b78b340;
+    color: #0B78B3;
+}
+
+.tag_adocao {
+    background-color: #68150A26;
+    color: #68150A;
+}
+
+.tag_educacao {
+    background-color: #1F006226;
+    color: #1F0062;
+}
+
+.projetos_item__desc {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    gap: 10px;
+}
+
+.projetos_item__desc h4 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 24px;
+    color: #1F0062;
+}
+
+.projetos_item__desc p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    color: #6b5A54;
+    line-height: 1.8;
+}
+
+.projetos_item__stat {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.projetos_item__stat span {
+    white-space: nowrap;
+}
+
+.projetos_item__stat span:nth-child(1) {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 34px;
+    color: #D73220;
+    font-weight: 700;
+}
+
+.projetos_item__stat span:nth-child(2) {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    color: #6b5A54;
+}

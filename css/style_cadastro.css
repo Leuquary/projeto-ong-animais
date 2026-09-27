@@ -1,0 +1,174 @@
+.cadastro_content {
+    margin: 0 100px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    align-items: start;
+    gap: 30px;
+}
+
+.cadastro_content__title {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cadastro_content__title h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 34px;
+    color: #1F0062;
+}
+
+.cadastro_content__title > p {
+    font-family: 'Work Sans', sans-serif;
+    color: #6b5A54;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.cadastro_content__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.cadastro_content__item {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 20px;
+    align-items: start;
+    padding: 20px 0;
+    border-top: 1px solid rgba(105, 22, 11, 0.162);
+}
+
+.cadastro_content__item:last-child {
+    border-bottom: 1px solid rgba(105, 22, 11, 0.162);
+}
+
+.cadastro_content__item h4 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.adocao{
+    background-color: #68150A26;
+    color: #68150A;
+}
+
+.voluntariado{
+    background-color: #0b78b340;
+    color: #0B78B3;
+}
+
+.doacao{
+    background-color: #D7322026;
+    color: #D73220;
+}
+
+.cadastro_content__item p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    color: #6b5A54;
+    line-height: 1.8;
+}
+
+.formulario {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #D73220;
+}
+
+.formulario fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formulario legend {
+    display: block;
+    width: 100%;
+    float: left;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.formulario legend,
+.formulario label {
+    font-family: 'Work Sans', sans-serif;
+    color: #fff;
+    padding: 0;
+}
+
+.formulario label{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.formulario__field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formulario__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 14px;
+    color: #1F0062;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.formulario textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.formulario ::placeholder {
+    color: #6b5A54;
+}
+
+.formulario__nota {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    color: #6b5A54;
+}
+
+.formulario button {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #962216;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background-color: #68170e;
+    transition: all 300ms;
+}

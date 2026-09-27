@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Projeto Patas de Rua</title>
+    <link rel="stylesheet" href="css/style_index.css">
+    <link rel="stylesheet" href="css/style_cadastro.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_content">
+            <div class="header_content__logo">
+                <img src="assets/logo.png" alt="Logo Menu" />
+                <h1>Instituto Patas da Rua</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li class="active"><a href="cadastro.html">Cadastre-se</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <section class="cadastro">
+            <div class="cadastro_content">
+                <div class="cadastro_content__title">
+                    <h2>Vamos começar</h2>
+                    <p>Preencha o formulário e diga como quer ajudar. Entramos em contato em até 3 dias úteis.</p>
+                    <div class="cadastro_content__list">
+                        <div class="cadastro_content__item">
+                            <h4 class="adocao">Adoção</h4>
+                            <p>Quer conhecer animais disponíveis e passar pela nossa avaliação de adoção responsável.</p>
+                        </div>
+                        <div class="cadastro_content__item">
+                            <h4 class="voluntariado">Voluntariado</h4>
+                            <p>Pode ajudar em resgates, feiras de adoção, transporte ou cuidados na casa de recuperação.</p>
+                        </div>
+                        <div class="cadastro_content__item">
+                            <h4 class="doacao">Doações</h4>
+                            <p>Quer contribuir com valores mensais, ração, medicamentos ou materiais de limpeza.</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="formulario" action="cadastro.html" method="get">
+                    <fieldset>
+                        <legend>Meus dados</legend>
+                        <div class="formulario__row">
+                            <div class="formulario__field">
+                                <label for="nome">Nome completo</label>
+                                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                            </div>
+                            <div class="formulario__field">
+                                <label for="telefone">Telefone</label>
+                                <input type="tel" id="telefone" name="telefone" placeholder="(11) 90000-0000"
+                                    pattern="\([1-9]{2}\) 9[0-9]{4}-[0-9]{4}" required>
+                            </div>
+                        </div>
+                        <div class="formulario__field">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                        </div>
+                        <div class="formulario__field">
+                            <label for="cpf">CPF</label>
+                            <input type="text" id="cpf" name="cpf"
+                                pattern="/^\d{3}\.\d{3}\.\d{3}-\d{2}$/" placeholder="Digite seu CPF" required>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Como quer ajudar</legend>
+                        <div class="formulario__field">
+                            <label for="interesse">Tenho interesse em</label>
+                            <select id="interesse" name="interesse" required>
+                                <option value="" selected disabled>Selecione uma opção</option>
+                                <option value="adocao">Adoção</option>
+                                <option value="voluntariado">Voluntariado</option>
+                                <option value="doacoes">Doações</option>
+                            </select>
+                        </div>
+                        <div class="formulario__field">
+                            <label for="mensagem">Conte um pouco mais</label>
+                            <textarea id="mensagem" name="mensagem"
+                                placeholder="Disponibilidade de horário, experiência com animais, tipo de animal de interesse..."></textarea>
+                        </div>
+                    </fieldset>
+                    <button type="submit">Enviar cadastro</button>
+                </form>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer_content">
+                <div class="footer_content__left">
+                    <div class="footer_content__item">
+                        <h4>Instituto Patas da Rua</h4>
+                        <span>Organização sem fins lucrativos dedicada ao resgate, tratamento e adoção de animais em
+                            situação
+                            de
+                            rua.</span>
+                    </div>
+                    <div class="footer_content__item">
+                        <h4>Navegação</h4>
+                        <ul>
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="projetos.html">Projetos</a></li>
+                            <li><a href="cadastro.html">Cadastre-se</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_content__item">
+                        <h4>Contato</h4>
+                        <span>institutopatas@gmail.com</span>
+                        <span>(11) 93830-4568</span>
+                        <span>São Paulo, SP</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="footer_content__right">
+                    <span>© 2026 Instituto Patas da Rua. Protótipo de site — conteúdo fictício para fins de
+                        demonstração.</span>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script>
+        const menuItems = document.querySelectorAll(".header nav ul li");
+        const paginaAtual = window.location.pathname.split("/").pop() || "index.html";
+
+        menuItems.forEach((item) => {
+            const link = item.querySelector("a");
+            item.classList.toggle("active", link.getAttribute("href") === paginaAtual);
+        });
+
+        if (!document.querySelector(".header nav ul li.active")) {
+            menuItems[0].classList.add("active");
+        }
+
+        const formulario = document.querySelector(".formulario");
+        const telefone = document.querySelector("#telefone");
+        const telefoneRegex = /^\([1-9]{2}\) 9[0-9]{4}-[0-9]{4}$/;
+
+        function validarTelefone() {
+            if (telefone.value === "" || telefoneRegex.test(telefone.value)) {
+                telefone.setCustomValidity("");
+            } else {
+                telefone.setCustomValidity("Informe o telefone no formato (21) 90000-0000.");
+            }
+        }
+
+        telefone.addEventListener("input", validarTelefone);
+        formulario.querySelector("button").addEventListener("click", validarTelefone);
+
+        formulario.addEventListener("submit", (event) => {
+            event.preventDefault();
+        });
+    </script>
+</body>
+
+</html>
