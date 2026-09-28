@@ -118,7 +118,19 @@
     color: var(--texto);
 }
 
-@media (min-width: 440px) and (max-width: 768px) {
+@media (min-width: 1441px) and (max-width: 2650px) {
+    .projetos_content {
+        margin: 0 20%;
+    }
+
+    .main{
+        height: 100vh;
+        justify-content: space-between;
+        gap: 0;
+    }
+}
+
+@media (min-width: 431px) and (max-width: 770px) {
     .projetos_content {
         margin: 0 70px;
     }
@@ -129,7 +141,7 @@
     }
 }
 
-@media (min-width: 320px) and (max-width: 439px) {
+@media (min-width: 320px) and (max-width: 430px) {
     .projetos_content {
         margin: 0 0;
     }

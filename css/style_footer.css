@@ -64,7 +64,19 @@
     color: rgba(255, 255, 255, 0.5);
 }
 
-@media (min-width: 440px) and (max-width: 768px) {
+@media (min-width: 1441px) and (max-width: 2650px) {
+   .footer_content {
+        margin: 0 20%;
+    } 
+}
+
+@media (min-width: 771px) and (max-width: 1440px) {
+    .footer_content {
+        margin: 0 50px;
+    }
+}
+
+@media (min-width: 431px) and (max-width: 770px) {
     .footer_content {
         margin: 0 70px;
     }
@@ -76,7 +88,7 @@
     }
 }
 
-@media (min-width: 320px) and (max-width: 439px) {
+@media (min-width: 320px) and (max-width: 430px) {
     .footer_content {
         margin: 0 0;
         padding: 30px;

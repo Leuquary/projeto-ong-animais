@@ -189,14 +189,33 @@
     text-align: center;
 }
 
-@media (min-width: 440px) and (max-width: 768px) {
+@media (min-width: 1441px) and (max-width: 2650px) {
+    .cadastro_content {
+        margin: 0 20%;
+    }
+
+    .main{
+        height: 100vh;
+        justify-content: space-between;
+        gap: 0;
+    }
+}
+
+@media (min-width: 771px) and (max-width: 1024px) {
+    .cadastro_content {
+        margin: 0 50px;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 431px) and (max-width: 770px) {
     .cadastro_content {
         margin: 0 70px;
         grid-template-columns: 1fr;
     }
 }
 
-@media (min-width: 320px) and (max-width: 439px) {
+@media (min-width: 320px) and (max-width: 430px) {
     .cadastro_content {
         margin: 0 0;
         grid-template-columns: 1fr;
