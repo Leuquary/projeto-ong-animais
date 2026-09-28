@@ -78,7 +78,7 @@
                         </div>
                         <div class="formulario__field">
                             <label for="cpf">CPF</label>
-                            <input type="text" id="cpf" name="cpf" pattern="/^\d{3}\.\d{3}\.\d{3}-\d{2}$/"
+                            <input type="text" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
                                 placeholder="Digite seu CPF" required>
                         </div>
                     </fieldset>
@@ -100,6 +100,7 @@
                         </div>
                     </fieldset>
                     <button type="submit">Enviar cadastro</button>
+                    <p class="formulario__sucesso" hidden>Cadastro enviado. Entramos em contato em até 3 dias úteis.</p>
                 </form>
             </div>
         </section>
@@ -176,6 +177,7 @@
 
         formulario.addEventListener("submit", (event) => {
             event.preventDefault();
+            document.querySelector(".formulario__sucesso").hidden = false;
         });
     </script>
 </body>

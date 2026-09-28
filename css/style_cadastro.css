@@ -134,10 +134,17 @@
     font-size: var(--tamanho-texto-pequeno);
     color: var(--vermelho-escuro);
     background-color: var(--branco);
-    border: none;
+    border: 2px solid transparent;
     border-radius: 8px;
     padding: 12px;
     cursor: pointer;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    outline: none;
+    border-color: var(--vermelho);
 }
 
 .formulario textarea {
@@ -166,6 +173,20 @@
     background-color: var(--vermelho-hover);
     color: var(--branco);
     transition: all 300ms;
+}
+
+.formulario button:active {
+    background-color: var(--vermelho-escuro);
+    color: var(--branco);
+    transition: all 300ms;
+}
+
+.formulario__sucesso {
+    font-family: var(--fonte-texto);
+    font-size: var(--tamanho-texto-pequeno);
+    font-weight: 700;
+    color: var(--azul);
+    text-align: center;
 }
 
 @media (min-width: 440px) and (max-width: 768px) {
