@@ -117,3 +117,25 @@
     font-size: var(--tamanho-texto);
     color: var(--texto);
 }
+
+@media (min-width: 440px) and (max-width: 768px) {
+    .projetos_content {
+        margin: 0 70px;
+    }
+
+    .projetos_content__item {
+        grid-template-columns: 100px 1fr auto;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 439px) {
+    .projetos_content {
+        margin: 0 0;
+    }
+
+    .projetos_content__item {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

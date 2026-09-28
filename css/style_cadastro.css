@@ -52,17 +52,17 @@
     text-align: center;
 }
 
-.adocao{
+.adocao {
     background-color: var(--marrom-suave);
     color: var(--marrom);
 }
 
-.voluntariado{
+.voluntariado {
     background-color: var(--azul-suave);
     color: var(--azul);
 }
 
-.doacao{
+.doacao {
     background-color: var(--vermelho-suave);
     color: var(--vermelho);
 }
@@ -109,7 +109,7 @@
     padding: 0;
 }
 
-.formulario label{
+.formulario label {
     font-size: var(--tamanho-texto-pequeno);
     font-weight: 500;
 }
@@ -166,4 +166,27 @@
     background-color: var(--vermelho-hover);
     color: var(--branco);
     transition: all 300ms;
+}
+
+@media (min-width: 440px) and (max-width: 768px) {
+    .cadastro_content {
+        margin: 0 70px;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 439px) {
+    .cadastro_content {
+        margin: 0 0;
+        grid-template-columns: 1fr;
+    }
+
+    .formulario{
+        padding: 35px;
+    }
+
+    .cadastro_content__item{
+        display: flex;
+        flex-direction: column;
+    }
 }
