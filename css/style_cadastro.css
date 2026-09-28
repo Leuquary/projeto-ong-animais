@@ -81,7 +81,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: var(--vermelho);
+    background-color: var(--vermelho-suave);
 }
 
 .formulario fieldset {
@@ -105,7 +105,7 @@
 .formulario legend,
 .formulario label {
     font-family: var(--fonte-texto);
-    color: var(--branco);
+    color: var(--vermelho-escuro);
     padding: 0;
 }
 
@@ -132,8 +132,8 @@
     width: 100%;
     font-family: var(--fonte-texto);
     font-size: var(--tamanho-texto-pequeno);
-    color: var(--roxo);
-    background-color: var(--branco-94);
+    color: var(--vermelho-escuro);
+    background-color: var(--branco);
     border: none;
     border-radius: 8px;
     padding: 12px;
@@ -146,19 +146,13 @@
 }
 
 .formulario ::placeholder {
-    color: var(--texto);
-}
-
-.formulario__nota {
-    font-family: var(--fonte-texto);
-    font-size: var(--tamanho-texto);
-    color: var(--texto);
+    color: var(--vermelho-escuro);
 }
 
 .formulario button {
     width: 100%;
     padding: 15px 20px;
-    background-color: var(--vermelho-escuro);
+    background-color: var(--vermelho);
     color: var(--branco);
     border: none;
     border-radius: 5px;
@@ -170,5 +164,6 @@
 
 .formulario button:hover {
     background-color: var(--vermelho-hover);
+    color: var(--branco);
     transition: all 300ms;
 }

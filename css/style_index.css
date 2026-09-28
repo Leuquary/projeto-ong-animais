@@ -20,7 +20,7 @@
     --tamanho-titulo-grande: 50px;
     --tamanho-titulo: 34px;
     --tamanho-subtitulo: 24px;
-    --tamanho-texto-grande: 20px;
+    --tamanho-texto-grande: 18px;
     --tamanho-texto: 16px;
     --tamanho-texto-pequeno: 14px;
 }
@@ -45,7 +45,7 @@ body{
 .hero .hero_title{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 25px;
 }
 
 .hero .hero_title h2{
@@ -58,7 +58,7 @@ body{
 .hero .hero_title p{
     font-size: var(--tamanho-texto-grande);
     color: var(--texto);
-    line-height: 2;
+    line-height: 1.5;
 }
 
 .hero .hero_content{
@@ -259,7 +259,7 @@ body{
 }
 
 .projeto_destaque__button button{
-    padding: 10px;
+    padding: 15px;
     background: transparent;
     border: none;
     font-family: var(--fonte-texto);
@@ -309,7 +309,7 @@ body{
 
 .disclaimer-cadastro__button button{
     background: transparent;
-    padding: 10px 15px;
+    padding: 15px 20px;
     border: 1px solid var(--branco);
     border-radius: 10px;
     font-family: var(--fonte-texto);

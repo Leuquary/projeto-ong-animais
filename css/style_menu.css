@@ -11,11 +11,12 @@
 }
 
 .header h1{
-    font-family: var(--fonte-
-    
-    titulo);
+    font-family: var(--fonte-titulo);
     color: var(--roxo);
-    font-size: var(--tamanho-subtitulo);
+    font-size: var(--tamanho-texto);
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .header nav ul{
