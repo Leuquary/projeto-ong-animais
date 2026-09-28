@@ -20,7 +20,12 @@
                     <span>Instituto Patas da Rua</span>
                 </h1>
             </div>
-            <nav>
+            <button type="button" class="header_menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="menu">
                 <ul>
                     <li><a href="index.html">Início</a></li>
                     <li class="active"><a href="projetos.html">Projetos</a></li>
@@ -149,6 +154,16 @@
         if (!document.querySelector(".header nav ul li.active")) {
             menuItems[0].classList.add("active");
         }
+
+        const botaoMenu = document.querySelector(".header_menu");
+        const menu = document.querySelector("#menu");
+
+        botaoMenu.addEventListener("click", () => {
+            const aberto = menu.classList.toggle("aberto");
+            botaoMenu.classList.toggle("aberto", aberto);
+            botaoMenu.setAttribute("aria-expanded", aberto ? "true" : "false");
+            botaoMenu.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
+        });
     </script>
 </body>
 
