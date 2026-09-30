@@ -19,12 +19,12 @@
                     <span>Instituto Patas da Rua</span>
                 </h1>
             </div>
-            <button type="button" class="header_menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+            <button type="button" class="menu_hamburguer" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <nav id="menu">
+            <nav class="menu_lista">
                 <ul>
                     <li class="active"><a href="index.html">Início</a></li>
                     <li><a href="projetos.html">Projetos</a></li>
@@ -173,7 +173,7 @@
     </main>
     <script>
         const menuItems = document.querySelectorAll(".header nav ul li");
-        const paginaAtual = window.location.pathname.split("/").pop() || "index.html";
+        const paginaAtual = window.location.pathname.split("/").pop();
 
         menuItems.forEach((item) => {
             const link = item.querySelector("a");
@@ -184,14 +184,14 @@
             menuItems[0].classList.add("active");
         }
 
-        const botaoMenu = document.querySelector(".header_menu");
-        const menu = document.querySelector("#menu");
+        const menuHamburguer = document.querySelector(".menu_hamburguer");
+        const menuLista = document.querySelector(".menu_lista");
 
-        botaoMenu.addEventListener("click", () => {
-            const aberto = menu.classList.toggle("aberto");
-            botaoMenu.classList.toggle("aberto", aberto);
-            botaoMenu.setAttribute("aria-expanded", aberto ? "true" : "false");
-            botaoMenu.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
+        menuHamburguer.addEventListener("click", () => {
+            const aberto = menuLista.classList.toggle("aberto");
+            menuHamburguer.classList.toggle("aberto", aberto);
+            menuHamburguer.setAttribute("aria-expanded", aberto ? "true" : "false");
+            menuHamburguer.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
         });
     </script>
 </body>

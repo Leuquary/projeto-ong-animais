@@ -2,9 +2,14 @@
     margin: 0 100px;
     padding: 20px;
     display: grid;
-    grid-template-columns: 1fr 1.1fr;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
     align-items: start;
     gap: 30px;
+}
+
+.cadastro_content__title,
+.formulario {
+    grid-column: span 6;
 }
 
 .cadastro_content__title {
@@ -33,11 +38,19 @@
 
 .cadastro_content__item {
     display: grid;
-    grid-template-columns: 160px 1fr;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: 20px;
     align-items: start;
     padding: 20px 0;
     border-top: 1px solid var(--borda);
+}
+
+.cadastro_content__item h4 {
+    grid-column: span 4;
+}
+
+.cadastro_content__item p {
+    grid-column: span 8;
 }
 
 .cadastro_content__item:last-child {
@@ -122,8 +135,12 @@
 
 .formulario__row {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: 20px;
+}
+
+.formulario__row .formulario__field {
+    grid-column: span 6;
 }
 
 .formulario input,
@@ -204,29 +221,49 @@
 @media (min-width: 771px) and (max-width: 1024px) {
     .cadastro_content {
         margin: 0 50px;
-        grid-template-columns: 1fr;
+    }
+
+    .cadastro_content__title,
+    .formulario {
+        grid-column: span 12;
     }
 }
 
 @media (min-width: 431px) and (max-width: 770px) {
     .cadastro_content {
         margin: 0 70px;
-        grid-template-columns: 1fr;
+    }
+
+    .cadastro_content__title,
+    .formulario {
+        grid-column: span 12;
+    }
+
+    .formulario__row .formulario__field {
+        grid-column: span 12;
     }
 }
 
 @media (min-width: 320px) and (max-width: 430px) {
     .cadastro_content {
         margin: 0 0;
-        grid-template-columns: 1fr;
+    }
+
+    .cadastro_content__title,
+    .formulario {
+        grid-column: span 12;
+    }
+
+    .formulario__row .formulario__field {
+        grid-column: span 12;
     }
 
     .formulario{
         padding: 35px;
     }
 
-    .cadastro_content__item{
-        display: flex;
-        flex-direction: column;
+    .cadastro_content__item h4,
+    .cadastro_content__item p {
+        grid-column: span 12;
     }
 }

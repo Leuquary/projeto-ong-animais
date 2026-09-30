@@ -32,11 +32,23 @@
 
 .projetos_content__item {
     display: grid;
-    grid-template-columns: 120px 1fr auto;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
     align-items: center;
     gap: 30px;
     padding: 28px 0;
     border-top: 1px solid var(--borda);
+}
+
+.projetos_item__tag {
+    grid-column: span 3;
+}
+
+.projetos_item__desc {
+    grid-column: span 5;
+}
+
+.projetos_item__stat {
+    grid-column: span 4;
 }
 
 .projetos_content__item:last-child {
@@ -136,8 +148,13 @@
     }
 
     .projetos_content__item {
-        grid-template-columns: 100px 1fr auto;
         gap: 20px;
+    }
+
+    .projetos_item__tag,
+    .projetos_item__desc,
+    .projetos_item__stat {
+        grid-column: span 12;
     }
 }
 
@@ -147,7 +164,12 @@
     }
 
     .projetos_content__item {
-        grid-template-columns: 1fr;
         gap: 20px;
+    }
+
+    .projetos_item__tag,
+    .projetos_item__desc,
+    .projetos_item__stat {
+        grid-column: span 12;
     }
 }
