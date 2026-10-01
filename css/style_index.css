@@ -13,6 +13,11 @@
     --azul-suave: #0b78b340;
     --marrom-suave: #68150A26;
     --roxo-suave: #1F006226;
+    --texto-claro: rgba(255, 255, 255, 0.9);
+    --texto-claro-medio: rgba(255, 255, 255, 0.8);
+    --texto-claro-suave: rgba(255, 255, 255, 0.7);
+    --texto-claro-apagado: rgba(255, 255, 255, 0.5);
+    --linha-clara: rgba(255, 255, 255, 0.5);
 
     --fonte-titulo: 'Fraunces', Georgia, serif;
     --fonte-texto: 'Work Sans', sans-serif;
@@ -88,7 +93,8 @@ body {
     gap: 15px;
 }
 
-.hero .hero_buttons a button {
+.hero .hero_buttons a {
+    display: inline-block;
     padding: 15px 20px;
     background: transparent;
     border: none;
@@ -96,24 +102,25 @@ body {
     border-radius: 5px;
     font-weight: 700;
     cursor: pointer;
+    text-decoration: none;
 }
 
-.hero .hero_buttons a button#ajuda {
+.hero .hero_buttons a#ajuda {
     background-color: var(--vermelho);
     color: var(--branco);
 }
 
-.hero .hero_buttons a button#ajuda:hover {
+.hero .hero_buttons a#ajuda:hover {
     background-color: var(--vermelho-escuro);
     transition: all 300ms;
 }
 
-.hero .hero_buttons a button#projetos {
+.hero .hero_buttons a#projetos {
     border: 1px solid var(--roxo);
     color: var(--roxo);
 }
 
-.hero .hero_buttons a button#projetos:hover {
+.hero .hero_buttons a#projetos:hover {
     background-color: var(--roxo);
     color: var(--branco);
     transition: all 300ms;
@@ -150,7 +157,7 @@ body {
 .ong_info__card span:nth-child(2) {
     font-size: var(--tamanho-texto-pequeno);
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--texto-claro-suave);
     font-family: var(--fonte-texto);
 }
 
@@ -282,21 +289,21 @@ body {
     flex-shrink: 0;
 }
 
-.projeto_destaque__button a button {
+.projeto_destaque__button a {
+    display: inline-block;
     padding: 15px;
     background: transparent;
-    border: none;
     font-family: var(--fonte-texto);
     border-radius: 5px;
     font-weight: 700;
     cursor: pointer;
-
+    text-decoration: none;
     border: 1px solid var(--roxo);
     color: var(--roxo);
     font-size: var(--tamanho-texto-pequeno);
 }
 
-.projeto_destaque__button a button:hover {
+.projeto_destaque__button a:hover {
     background-color: var(--roxo);
     color: var(--branco);
     transition: all 300ms;
@@ -326,12 +333,13 @@ body {
 }
 
 .disclaimer_cadastro p {
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--texto-claro-suave);
     font-family: 16px;
     font-family: var(--fonte-texto);
 }
 
-.disclaimer_cadastro__button a button {
+.disclaimer_cadastro__button a {
+    display: inline-block;
     background: transparent;
     padding: 15px 20px;
     border: 1px solid var(--branco);
@@ -341,9 +349,10 @@ body {
     font-size: var(--tamanho-texto);
     color: var(--branco);
     cursor: pointer;
+    text-decoration: none;
 }
 
-.disclaimer_cadastro__button a button:hover {
+.disclaimer_cadastro__button a:hover {
     background-color: var(--branco);
     color: var(--vermelho);
     transition: all 300ms;
@@ -470,7 +479,7 @@ body {
         padding: 30px 20px;
     }
 
-    .disclaimer_cadastro__button button {
+    .disclaimer_cadastro__button a {
         font-size: var(--tamanho-texto-pequeno);
         padding: 15px;
     }
@@ -535,8 +544,133 @@ body {
         align-items: start;
     }
 
-    .disclaimer_cadastro__button button {
+    .disclaimer_cadastro__button a {
         font-size: var(--tamanho-texto-pequeno);
         padding: 10px 15px;
     }
+}
+
+html[data-contraste="alto"] {
+    color-scheme: dark;
+    --creme: #000000;
+    --branco: #ffffff;
+    --texto: #ffffff;
+    --roxo: #ffffff;
+    --vermelho: #ffe14d;
+    --vermelho-escuro: #ffffff;
+    --vermelho-hover: #ffffff;
+    --marrom: #ffe14d;
+    --azul: #7dffff;
+    --borda: #ffffff;
+    --vermelho-suave: #000000;
+    --azul-suave: #000000;
+    --marrom-suave: #000000;
+    --roxo-suave: #000000;
+    --texto-claro: #ffffff;
+    --texto-claro-medio: #ffffff;
+    --texto-claro-suave: #ffffff;
+    --texto-claro-apagado: #ffffff;
+    --linha-clara: #ffffff;
+}
+
+html[data-contraste="alto"] .header {
+    background-color: #000000;
+    border-bottom: 2px solid #ffffff;
+}
+
+html[data-contraste="alto"] .footer,
+html[data-contraste="alto"] .ong_info,
+html[data-contraste="alto"] .projeto_destaque__content,
+html[data-contraste="alto"] .formulario {
+    background-color: #000000;
+    border: 2px solid #ffffff;
+}
+
+html[data-contraste="alto"] .footer,
+html[data-contraste="alto"] .ong_info {
+    border-left: none;
+    border-right: none;
+}
+
+html[data-contraste="alto"] .contraste,
+html[data-contraste="alto"] .hero .hero_buttons a#ajuda,
+html[data-contraste="alto"] .formulario button,
+html[data-contraste="alto"] .disclaimer_cadastro {
+    background-color: #ffe14d;
+    color: #000000;
+    border-color: #000000;
+}
+
+html[data-contraste="alto"] .contraste[aria-pressed="true"],
+html[data-contraste="alto"] .hero .hero_buttons a#ajuda:hover,
+html[data-contraste="alto"] .formulario button:hover,
+html[data-contraste="alto"] .formulario button:active {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+html[data-contraste="alto"] .disclaimer_cadastro h4,
+html[data-contraste="alto"] .disclaimer_cadastro p,
+html[data-contraste="alto"] .disclaimer_cadastro__button a {
+    color: #000000;
+    border-color: #000000;
+}
+
+html[data-contraste="alto"] .disclaimer_cadastro__button a:hover {
+    background-color: #000000;
+    color: #ffe14d;
+}
+
+html[data-contraste="alto"] .hero .hero_buttons a#projetos,
+html[data-contraste="alto"] .projeto_destaque__button a {
+    color: #ffe14d;
+    border-color: #ffe14d;
+    background-color: transparent;
+}
+
+html[data-contraste="alto"] .hero .hero_buttons a#projetos:hover,
+html[data-contraste="alto"] .projeto_destaque__button a:hover {
+    background-color: #ffe14d;
+    color: #000000;
+}
+
+html[data-contraste="alto"] .projetos_item__tag,
+html[data-contraste="alto"] .cadastro_content__item h4,
+html[data-contraste="alto"] .projeto_destaque__title span {
+    background-color: #000000;
+    border: 2px solid currentColor;
+}
+
+html[data-contraste="alto"] .formulario input,
+html[data-contraste="alto"] .formulario select,
+html[data-contraste="alto"] .formulario textarea {
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+html[data-contraste="alto"] .formulario ::placeholder {
+    color: #ffffff;
+}
+
+html[data-contraste="alto"] .formulario legend,
+html[data-contraste="alto"] .formulario label {
+    color: #ffe14d;
+}
+
+html[data-contraste="alto"] .formulario__sucesso {
+    color: #7dffff;
+}
+
+html[data-contraste="alto"] :focus-visible {
+    outline: 3px solid #ffe14d;
+    outline-offset: 3px;
+}
+
+html[data-contraste="alto"] .formulario input:focus,
+html[data-contraste="alto"] .formulario select:focus,
+html[data-contraste="alto"] .formulario textarea:focus {
+    outline: 3px solid #ffe14d;
+    outline-offset: 2px;
+    border-color: #ffe14d;
 }

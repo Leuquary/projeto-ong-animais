@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projetos | Projeto Patas de Rua</title>
+    <script>
+        (function () {
+            try {
+                var salvo = localStorage.getItem("contraste");
+                var alto = salvo === "alto" || (salvo !== "normal" && window.matchMedia("(prefers-contrast: more)").matches);
+                if (alto) document.documentElement.setAttribute("data-contraste", "alto");
+            } catch (erro) {}
+        })();
+    </script>
     <link rel="stylesheet" href="css/style_index.css">
     <link rel="stylesheet" href="css/style_menu.css">
     <link rel="stylesheet" href="css/style_footer.css">
@@ -20,10 +29,11 @@
                     <span>Instituto Patas da Rua</span>
                 </h1>
             </div>
-            <button type="button" class="header_menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button type="button" class="contraste" aria-pressed="false">Alto contraste</button>
+            <button type="button" class="menu_hamburguer" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </button>
             <nav id="menu">
                 <ul>
@@ -106,9 +116,7 @@
                 <p>Voluntariado, apadrinhamento ou doação — cada projeto precisa de mãos diferentes.</p>
             </div>
             <div class="disclaimer_cadastro__button">
-                <a href="cadastro.html">
-                    <button type="button">Fazer meu cadastro</button>
-                </a>
+                <a href="cadastro.html">Fazer meu cadastro</a>
             </div>
         </section>
         <footer class="footer">
@@ -150,14 +158,21 @@
 
         menuItems.forEach((item) => {
             const link = item.querySelector("a");
-            item.classList.toggle("active", link.getAttribute("href") === paginaAtual);
+            const ativo = link.getAttribute("href") === paginaAtual;
+            item.classList.toggle("active", ativo);
+            if (ativo) {
+                link.setAttribute("aria-current", "page");
+            } else {
+                link.removeAttribute("aria-current");
+            }
         });
 
         if (!document.querySelector(".header nav ul li.active")) {
             menuItems[0].classList.add("active");
+            menuItems[0].querySelector("a").setAttribute("aria-current", "page");
         }
 
-        const botaoMenu = document.querySelector(".header_menu");
+        const botaoMenu = document.querySelector(".menu_hamburguer");
         const menu = document.querySelector("#menu");
 
         botaoMenu.addEventListener("click", () => {
@@ -167,6 +182,7 @@
             botaoMenu.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
         });
     </script>
+    <script src="js/contraste.js"></script>
 </body>
 
 </html>

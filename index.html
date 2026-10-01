@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Patas de Rua</title>
+    <script>
+        (function () {
+            try {
+                var salvo = localStorage.getItem("contraste");
+                var alto = salvo === "alto" || (salvo !== "normal" && window.matchMedia("(prefers-contrast: more)").matches);
+                if (alto) document.documentElement.setAttribute("data-contraste", "alto");
+            } catch (erro) {}
+        })();
+    </script>
     <link rel="stylesheet" href="css/style_index.css">
     <link rel="stylesheet" href="css/style_menu.css">
     <link rel="stylesheet" href="css/style_footer.css">
@@ -19,12 +28,13 @@
                     <span>Instituto Patas da Rua</span>
                 </h1>
             </div>
+            <button type="button" class="contraste" aria-pressed="false">Alto contraste</button>
             <button type="button" class="menu_hamburguer" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </button>
-            <nav class="menu_lista">
+            <nav id="menu">
                 <ul>
                     <li class="active"><a href="index.html">Início</a></li>
                     <li><a href="projetos.html">Projetos</a></li>
@@ -43,12 +53,8 @@
                         São Paulo.
                         Um trabalho diário, sustentado por quem acredita que todo bichinho deveria ter seu lar.</p>
                     <div class="hero_buttons">
-                        <a href="cadastro.html">
-                            <button type="button" id="ajuda">Quero ajudar</button>
-                        </a>
-                        <a href="projetos.html">
-                            <button type="button" id="projetos">Nossos projetos</button>
-                        </a>
+                        <a href="cadastro.html" id="ajuda">Quero ajudar</a>
+                        <a href="projetos.html" id="projetos">Nossos projetos</a>
                     </div>
                 </div>
                 <div class="hero_image">
@@ -121,9 +127,7 @@
                         veterinárias locais.</p>
                 </div>
                 <div class="projeto_destaque__button">
-                    <a href="projetos.html">
-                        <button type="button">Conhecer projetos</button>
-                    </a>
+                    <a href="projetos.html">Conhecer projetos</a>
                 </div>
             </div>
         </section>
@@ -133,9 +137,7 @@
                 <p>Seja voluntário, apadrinhe um animal ou contribua com uma doação mensal.</p>
             </div>
             <div class="disclaimer_cadastro__button">
-                <a href="cadastro.html">
-                    <button type="button">Fazer meu cadastro</button>
-                </a>
+                <a href="cadastro.html">Fazer meu cadastro</a>
             </div>
         </section>
         <footer class="footer">
@@ -177,15 +179,22 @@
 
         menuItems.forEach((item) => {
             const link = item.querySelector("a");
-            item.classList.toggle("active", link.getAttribute("href") === paginaAtual);
+            const ativo = link.getAttribute("href") === paginaAtual;
+            item.classList.toggle("active", ativo);
+            if (ativo) {
+                link.setAttribute("aria-current", "page");
+            } else {
+                link.removeAttribute("aria-current");
+            }
         });
 
         if (!document.querySelector(".header nav ul li.active")) {
             menuItems[0].classList.add("active");
+            menuItems[0].querySelector("a").setAttribute("aria-current", "page");
         }
 
         const menuHamburguer = document.querySelector(".menu_hamburguer");
-        const menuLista = document.querySelector(".menu_lista");
+        const menuLista = document.querySelector("#menu");
 
         menuHamburguer.addEventListener("click", () => {
             const aberto = menuLista.classList.toggle("aberto");
@@ -194,6 +203,7 @@
             menuHamburguer.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
         });
     </script>
+    <script src="js/contraste.js"></script>
 </body>
 
 </html>

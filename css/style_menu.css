@@ -5,9 +5,24 @@
 
 .header .header_content {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: end;
+    gap: 16px;
     margin: 0 100px;
+}
+
+.contraste {
+    margin-left: auto;
+    flex-shrink: 0;
+    font-family: var(--fonte-texto);
+    font-size: var(--tamanho-texto-pequeno);
+    font-weight: 700;
+    color: var(--marrom);
+    background: transparent;
+    border: 2px solid var(--marrom);
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
 }
 
 .header h1 {

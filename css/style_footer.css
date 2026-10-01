@@ -29,13 +29,13 @@
 
 .footer_content__item h4 {
     font-family: var(--fonte-titulo);
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--texto-claro);
     font-size: var(--tamanho-subtitulo);
 }
 
 .footer_content__item span {
     font-family: var(--fonte-texto);
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--texto-claro-medio);
     font-size: var(--tamanho-texto);
     line-height: 2;
 }
@@ -54,19 +54,19 @@
     text-decoration: none;
     text-decoration-line: none;
     font-size: var(--tamanho-texto);
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--texto-claro-medio);
 }
 
 .footer_content hr {
     border: none;
     height: 1px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: var(--linha-clara);
     margin: 0;
 }
 
 .footer_content__bottom span {
     font-size: var(--tamanho-texto-pequeno);
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--texto-claro-apagado);
 }
 
 @media (min-width: 1441px) and (max-width: 2650px) {

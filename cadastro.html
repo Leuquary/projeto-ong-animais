@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro | Projeto Patas de Rua</title>
+    <script>
+        (function () {
+            try {
+                var salvo = localStorage.getItem("contraste");
+                var alto = salvo === "alto" || (salvo !== "normal" && window.matchMedia("(prefers-contrast: more)").matches);
+                if (alto) document.documentElement.setAttribute("data-contraste", "alto");
+            } catch (erro) {}
+        })();
+    </script>
     <link rel="stylesheet" href="css/style_index.css">
     <link rel="stylesheet" href="css/style_menu.css">
     <link rel="stylesheet" href="css/style_footer.css">
@@ -20,10 +29,11 @@
                     <span>Instituto Patas da Rua</span>
                 </h1>
             </div>
-            <button type="button" class="header_menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button type="button" class="contraste" aria-pressed="false">Alto contraste</button>
+            <button type="button" class="menu_hamburguer" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </button>
             <nav id="menu">
                 <ul>
@@ -100,7 +110,7 @@
                         </div>
                     </fieldset>
                     <button type="submit">Enviar cadastro</button>
-                    <p class="formulario__sucesso" hidden>Cadastro enviado. Entramos em contato em até 3 dias úteis.</p>
+                    <p class="formulario__sucesso" role="status" aria-live="polite"></p>
                 </form>
             </div>
         </section>
@@ -143,14 +153,21 @@
 
         menuItems.forEach((item) => {
             const link = item.querySelector("a");
-            item.classList.toggle("active", link.getAttribute("href") === paginaAtual);
+            const ativo = link.getAttribute("href") === paginaAtual;
+            item.classList.toggle("active", ativo);
+            if (ativo) {
+                link.setAttribute("aria-current", "page");
+            } else {
+                link.removeAttribute("aria-current");
+            }
         });
 
         if (!document.querySelector(".header nav ul li.active")) {
             menuItems[0].classList.add("active");
+            menuItems[0].querySelector("a").setAttribute("aria-current", "page");
         }
 
-        const botaoMenu = document.querySelector(".header_menu");
+        const botaoMenu = document.querySelector(".menu_hamburguer");
         const menu = document.querySelector("#menu");
 
         botaoMenu.addEventListener("click", () => {
@@ -177,9 +194,11 @@
 
         formulario.addEventListener("submit", (event) => {
             event.preventDefault();
-            document.querySelector(".formulario__sucesso").hidden = false;
+            const sucesso = document.querySelector(".formulario__sucesso");
+            sucesso.textContent = "Cadastro enviado. Entramos em contato em até 3 dias úteis.";
         });
     </script>
+    <script src="js/contraste.js"></script>
 </body>
 
 </html>
